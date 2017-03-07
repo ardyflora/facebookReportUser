@@ -16,12 +16,12 @@ driver = webdriver.Chrome()
 #driver = webdriver.PhantomJS()
 
 url = "https://www.facebook.com/profile.php?id=100009281652810"
-user_email = 'user'
-user_pass = 'pass'
+user_email = '<user email address>'
+user_pass = '<user password>'
 waitTime = 10
 
 
-class fbReportUserProfile:
+class FbReportUserProfile:
 
 	def __init__(self, driver,url,email,password):
 		self.driver = driver
@@ -58,7 +58,7 @@ class fbReportUserProfile:
 '''
 
 #Navigating to the url
-fbReportUserProfile = fbReportUserProfile(driver,url,user_email,user_pass)
+fbReportUserProfile = FbReportUserProfile(driver,url,user_email,user_pass)
 fbReportUserProfile.navigate(url)
 
 # Logging in facebook by using email and password
